@@ -1,6 +1,10 @@
 package lab2;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+/*
+TENTAR TORNA ESSA CLASSE MAIS CONCISA
+ */
 
 public class RegistroResumos {
 
@@ -8,6 +12,7 @@ public class RegistroResumos {
     private int limite;
     private int ponteiro;
     private int quantidade;
+    private String chaveDeBusca;
 
     public RegistroResumos(int numeroDeResumos) {
         this.limite = numeroDeResumos;
@@ -63,5 +68,17 @@ public class RegistroResumos {
             }
         }
         return false;
+    }
+
+    public String[] busca(String chaveDeBusca) {
+        List<String> saida = new ArrayList<>()
+        for (int i = 0; i < quantidade; i++){
+            String conteudo = resumos[i].getConteudo();
+            if (conteudo.contains(chaveDeBusca.toLowerCase())) {
+            saida.add(resumos[i].getTema());
+            }
+        }
+        java.util.Collections.sort(saida);
+        return saida.toArray(new String[0]);
     }
 }

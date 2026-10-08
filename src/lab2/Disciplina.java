@@ -3,16 +3,25 @@ package lab2;
 import java.util.Arrays;
 
 public class Disciplina {
-
     private String nomeDisciplina;
     private int horasEstudo;
     private double[] notas;
     private double media;
+    private int numeroNotas;
+    private int[] pesosNotas;
 
     public Disciplina (String nomeDisciplina) {
         this.nomeDisciplina = nomeDisciplina;
         this.horasEstudo = 0;
         this.notas = new double[4];
+    }
+
+    public Disciplina(int numeroNotas) {
+        this.numeroNotas = numeroNotas;
+    }
+
+    public Disciplina(String nomeDisciplina, int numeroNotas, int[] pesosNotas) {
+        this.pesosNotas = new int[pesosNotas];
     }
 
     public void cadastraHoras(int horasEstudo) {
@@ -24,20 +33,22 @@ public class Disciplina {
     }
 
     public boolean aprovado() {
-        double somatorio_notas = 0;
+        double somatorioNotas = 0;
 
-        for (double num : notas) {
-            somatorio_notas += num;
+        for (int i = 0; i < quantidade; i++;) {
+            somatorioNotas += notas[i] * pesoNotas[i];
 
         }
 
-        media = somatorio_notas / 4;
+        media = somatorioNotas / 4;
 
         if (media >= 7.0) {
             return true;
         }
         return false;
     }
+
+
 
     @Override
     public String toString() {

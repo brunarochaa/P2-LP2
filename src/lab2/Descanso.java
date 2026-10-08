@@ -1,6 +1,9 @@
 package lab2;
 
 public class Descanso {
+        /*
+        Adorei a classe descanso esta muito parecida com minha pensamos igual.
+         */
 
         private int horasDescanso;
         private int numeroDeSemanas;

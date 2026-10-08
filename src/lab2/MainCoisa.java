@@ -1,6 +1,6 @@
 package lab2;
 
-public class MainCoisa {
+public class  MainCoisa {
     public static void main(String[] args) {
         registrarDescanso();
         System.out.println("-----");
